@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2024-08-21 17:21:42.070626",
+  "module": "Envision",
+  "name": "name",
+  "script": "frappe.ui.form.on('Purchase Order', {\n\trefresh(frm) {\n\tconsole.log(\"Hello\")\n\t}\n})",
+  "view": "Form"
+ }
+]

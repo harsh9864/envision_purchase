@@ -1,0 +1,83 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2024-07-22 13:00:09.552884",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-29 18:59:55.665392",
+  "name": "Financial Approval",
+  "style": "Warning",
+  "workflow_state_name": "Financial Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-29 18:59:17.261684",
+  "name": "Technical Approval",
+  "style": "Warning",
+  "workflow_state_name": "Technical Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2024-07-22 13:00:09.554231",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-23 16:48:09.500376",
+  "name": "Checked",
+  "style": "Info",
+  "workflow_state_name": "Checked"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2024-07-22 13:00:09.555350",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-29 15:46:37.268215",
+  "name": "HOD approval",
+  "style": "Warning",
+  "workflow_state_name": "HOD approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-23 16:49:04.416548",
+  "name": "Prepared",
+  "style": "Warning",
+  "workflow_state_name": "Prepared"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-29 15:46:58.811123",
+  "name": "Director Approval",
+  "style": "Success",
+  "workflow_state_name": "Director Approval"
+ }
+]
