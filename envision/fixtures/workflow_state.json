@@ -2,8 +2,26 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-23 16:48:09.500376",
+  "name": "Checked",
+  "style": "Info",
+  "workflow_state_name": "Checked"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2024-08-23 11:28:34.823068",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "question-sign",
-  "modified": "2024-07-22 13:00:09.552884",
+  "modified": "2024-08-23 11:28:34.821057",
   "name": "Pending",
   "style": "",
   "workflow_state_name": "Pending"
@@ -29,26 +47,8 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "ok-sign",
-  "modified": "2024-07-22 13:00:09.554231",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-07-23 16:48:09.500376",
-  "name": "Checked",
-  "style": "Info",
-  "workflow_state_name": "Checked"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "remove",
-  "modified": "2024-07-22 13:00:09.555350",
+  "modified": "2024-08-23 11:28:34.824788",
   "name": "Rejected",
   "style": "Danger",
   "workflow_state_name": "Rejected"
@@ -57,10 +57,28 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-07-29 15:46:37.268215",
-  "name": "HOD approval",
-  "style": "Warning",
-  "workflow_state_name": "HOD approval"
+  "modified": "2024-10-03 18:31:41.850851",
+  "name": "Pending At Director",
+  "style": "",
+  "workflow_state_name": "Pending At Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-07-29 15:46:58.811123",
+  "name": "Director Approval",
+  "style": "Success",
+  "workflow_state_name": "Director Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-03 18:30:53.309317",
+  "name": "Pending At HOD",
+  "style": "",
+  "workflow_state_name": "Pending At HOD"
  },
  {
   "docstatus": 0,
@@ -75,9 +93,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-07-29 15:46:58.811123",
-  "name": "Director Approval",
-  "style": "Success",
-  "workflow_state_name": "Director Approval"
+  "modified": "2024-07-29 15:46:37.268215",
+  "name": "HOD approval",
+  "style": "Warning",
+  "workflow_state_name": "HOD approval"
  }
 ]

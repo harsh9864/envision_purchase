@@ -16,6 +16,7 @@ frappe.listview_settings['Supplier Quotation'] = {
             // Ensure custom_request_for_quotation exists before proceeding
             if (!doc.custom_request_for_quotation) {
                 frappe.msgprint(__('No Request for Quotation found for this document.'));
+                
                 return;
             }
             
