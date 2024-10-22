@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Supplier Quotation",
   "is_active": 1,
-  "modified": "2024-10-07 15:37:17.777990",
+  "modified": "2024-10-22 11:24:05.805846",
   "name": "Supplier Quotation01",
   "override_status": 0,
   "send_email_alert": 0,
@@ -79,7 +79,7 @@
     "parent": "Supplier Quotation01",
     "parentfield": "states",
     "parenttype": "Workflow",
-    "state": "Director Approval",
+    "state": "Approved",
     "update_field": null,
     "update_value": null,
     "workflow_builder_id": null
@@ -138,11 +138,11 @@
     "workflow_builder_id": null
    },
    {
-    "action": "Director Approval",
+    "action": "Approve",
     "allow_self_approval": 1,
     "allowed": "Managing Director",
     "condition": null,
-    "next_state": "Director Approval",
+    "next_state": "Approved",
     "parent": "Supplier Quotation01",
     "parentfield": "transitions",
     "parenttype": "Workflow",
@@ -158,7 +158,7 @@
     "parent": "Supplier Quotation01",
     "parentfield": "transitions",
     "parenttype": "Workflow",
-    "state": "Director Approval",
+    "state": "Approved",
     "workflow_builder_id": null
    }
   ],
