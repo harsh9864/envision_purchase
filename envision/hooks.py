@@ -210,6 +210,7 @@ doctype_js = {
     "Purchase Invoice" : "public/js/purchase_invoice.js",
     "Purchase Receipt" : "public/js/purchase_receipt.js",
     "Purchase Order" : "public/js/purchase_order.js",
+    "Sales Order" : "public/js/sales _order.js",
 }
 doctype_list_js = {"Supplier Quotation" : "public/js/supplier quotation List view button multiple.js"
 }

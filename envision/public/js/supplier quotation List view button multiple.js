@@ -4,7 +4,7 @@ frappe.listview_settings['Supplier Quotation'] = {
             return true;  // Always show the button
         },
         get_label: function() {
-            return __('View Report');  // Label for the button
+            return __('Comparison');  // Label for the button
         },
         get_description: function(doc) {
             return __('Print {0}', [doc.name]);  // Tooltip text
@@ -14,11 +14,11 @@ frappe.listview_settings['Supplier Quotation'] = {
             // console.log("Custom RFQ value: ", doc.custom_request_for_quotation);
             
             // Ensure custom_request_for_quotation exists before proceeding
-            if (!doc.custom_request_for_quotation) {
-                frappe.msgprint(__('No Request for Quotation found for this document.'));
+            // if (!doc.custom_request_for_quotation) {
+            //     frappe.msgprint(__('No Request for Quotation found for this document.'));
                 
-                return;
-            }
+            //     return;
+            // }
             
             // Set route options to filter the report by the custom_request_for_quotation field
             frappe.route_options = {
@@ -26,7 +26,7 @@ frappe.listview_settings['Supplier Quotation'] = {
             };
             
             // Route to the "Supplier Comparison" report with the applied filters
-            frappe.set_route("query-report", "Supplier Comparision");
+            frappe.set_route("query-report", "Comparison");
         }
     }
 };
