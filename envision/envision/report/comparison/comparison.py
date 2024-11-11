@@ -117,7 +117,7 @@ def prepare_data(supplier_quotation_data):
             "incoterm":incoterm, 
             "named_place":named_place,
             "custom_payment_terms" : custom_payment_terms,
-            "custom_delivery_terms" : custom_delivery_terms # Store the quotation name
+            "custom_delivery_terms" : custom_delivery_terms 
         }
 
         item_totals[supplier_name] += amount
