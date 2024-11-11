@@ -57,7 +57,7 @@ frappe.query_reports["Comparison"] = {
                     return {
                         query: "envision.envision.report.comparison.comparison.item_query",
                         filters: {
-                            // request_for_quotation: quote,
+                            request_for_quotation: quote,
                             project: project, // Pass project filter
 							company: company
                         },

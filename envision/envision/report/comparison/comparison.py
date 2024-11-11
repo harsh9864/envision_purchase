@@ -202,3 +202,24 @@ def prepare_data(supplier_quotation_data):
 
     return out
 
+@frappe.whitelist()
+def item_query(doctype, txt, searchfield, start, page_len, filters):
+    query = """
+        SELECT item_code
+        FROM `tabSupplier Quotation Item` 
+        WHERE request_for_quotation = %(request_for_quotation)s
+        AND docstatus < 2
+        AND item_code LIKE %(txt)s
+    """
+    
+    # If the project filter is provided, include it in the query
+    if filters.get("project"):
+        query += " AND project IN %(project)s"
+        
+    query += " ORDER BY item_code"
+
+    return frappe.db.sql(query, {
+        "request_for_quotation": filters.get("request_for_quotation"),
+        "txt": "%%%s%%" % txt,
+        "project": filters.get("project")
+    })
