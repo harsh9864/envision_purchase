@@ -21,3 +21,14 @@ frappe.ui.form.on('Purchase Order Item', {
         });
     }
 });
+frappe.ui.form.on("Purchase Order",{
+    refresh:function(frm){
+        frm.set_query("custom_department",function(){
+            return{
+                filters:{
+                    'company':frm.doc.company
+                }
+            }
+        })
+    }
+})

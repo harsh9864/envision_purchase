@@ -70,10 +70,11 @@ frappe.query_reports["Comparison"] = {
 			fieldname: "supplier",
 			label: __("Supplier"),
 			fieldtype: "MultiSelectList",
+			
 			get_data: function (txt) {
 				return frappe.db.get_link_options("Supplier", txt);
 			},
-		},
+		},	
 		{
 			fieldtype: "MultiSelectList",
 			label: __("Supplier Quotation"),
@@ -96,8 +97,7 @@ frappe.query_reports["Comparison"] = {
 		
 		
 	],
-	after_datatable_render: table_instance => {
-        frappe.query_report.datatable.removeColumn(0)},
+	 
 	formatter: (value, row, column, data, default_formatter) => {
 		value = default_formatter(value, row, column, data);
 
@@ -108,7 +108,7 @@ frappe.query_reports["Comparison"] = {
 				value = `<div style="color:darkorange">${value}</div>`;
 			}
 		}
-
+		
 		if (column.fieldname === "price_per_unit" && data.price_per_unit && data.min && data.min === 1) {
 			value = `<div style="color:green">${value}</div>`;
 		}

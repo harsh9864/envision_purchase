@@ -208,6 +208,9 @@ app_license = "mit"
 # --------------------
 doctype_js = {
     "Purchase Invoice" : "public/js/purchase_invoice.js",
+    "Supplier Quotation" : "public/js/supplier_quotation.js",
+    "Request for Quotation" : "public/js/request_for_quotation.js",
+    "Material Request" : "public/js/material_request.js",
     "Purchase Receipt" : "public/js/purchase_receipt.js",
     "Purchase Order" : "public/js/purchase_order.js",
     "Sales Order" : "public/js/sales _order.js",
@@ -261,6 +264,13 @@ fixtures = [
         ]
     ]},
     {"dt":"Custom Field","filters":[
+        [
+        "module","in",[
+                "Envision"
+            ]
+        ]
+    ]},
+    {"dt":"Property Setter","filters":[
         [
         "module","in",[
                 "Envision"
