@@ -11,15 +11,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "question-sign",
-  "modified": "2024-08-23 11:28:34.821057",
-  "name": "Pending",
-  "style": "",
-  "workflow_state_name": "Pending"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "",
   "modified": "2024-07-29 18:59:55.665392",
   "name": "Financial Approval",
@@ -101,24 +92,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "remove",
-  "modified": "2024-08-23 11:28:34.824788",
-  "name": "Rejected",
-  "style": "Danger",
-  "workflow_state_name": "Rejected"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "ok-sign",
-  "modified": "2024-08-23 11:28:34.823068",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "",
   "modified": "2024-10-23 17:21:01.759648",
   "name": "Submitted",
@@ -142,5 +115,68 @@
   "name": "Draft",
   "style": "Warning",
   "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2024-11-13 09:48:22.701446",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2024-11-13 09:48:22.704147",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2024-11-13 09:48:22.706497",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-11-13 09:59:26.034497",
+  "name": "Budget Review",
+  "style": "Info",
+  "workflow_state_name": "Budget Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-11-13 09:59:45.314982",
+  "name": "Director Review",
+  "style": "Primary",
+  "workflow_state_name": "Director Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-11-13 10:00:05.778658",
+  "name": "Adjusted",
+  "style": "Inverse",
+  "workflow_state_name": "Adjusted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-11-13 10:00:25.544541",
+  "name": "Rework",
+  "style": "Warning",
+  "workflow_state_name": "Rework"
  }
 ]
