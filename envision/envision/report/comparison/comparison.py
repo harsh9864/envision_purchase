@@ -48,6 +48,7 @@ def get_data(filters):
             & (sq.company == filters.get("company"))
             & (sq.transaction_date.between(filters.get("from_date"), filters.get("to_date")))
         )
+          .groupby(sq_item.item_code, sq_item.rate)
     )
     
     if filters.get("request_for_quotation"):
@@ -93,6 +94,7 @@ def prepare_data(supplier_quotation_data):
     grouped_data = defaultdict(lambda: defaultdict(lambda: {"item_code":'',"rate": 0, "qty": 0, "amount": 0, "quotation_number": "", "name": ""}))
 
     for data in supplier_quotation_data:
+        
         item_code = data.get("item_code")
         name = data.get("name")
         custom_remarks = data.get('custom_remarks')
@@ -119,7 +121,7 @@ def prepare_data(supplier_quotation_data):
             "custom_payment_terms" : custom_payment_terms,
             "custom_delivery_terms" : custom_delivery_terms 
         }
-
+        
         item_totals[supplier_name] += amount
 
     quote_name_row = {"item_code": "<b>Quotation Name</b>"}
@@ -131,6 +133,7 @@ def prepare_data(supplier_quotation_data):
 
     out.append(quote_name_row)
     # Populate rows based on grouped data
+    
     for item_code, supplier_data in grouped_data.items():
         
         # Row for item details and quantity
@@ -141,6 +144,7 @@ def prepare_data(supplier_quotation_data):
 
         # Add quotation number first, followed by rate and amount for each supplier
         for supplier, data in supplier_data.items():
+            print(data)
             row[f"{supplier}_rate"] = data["rate"]
             row[f"{supplier}_amount"] = data["amount"]
 

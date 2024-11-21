@@ -256,6 +256,7 @@ doctype_list_js = {"Supplier Quotation" : "public/js/supplier quotation List vie
 fixtures = [
      "Workflow",
      "Workflow State",
+     "Workflow Action Master",
     {"dt":"Print Format","filters":[
         [
         "module","in",[

@@ -189,7 +189,7 @@
     "workflow_builder_id": "action-9"
    },
    {
-    "action": "DisQualify",
+    "action": "Disqualify",
     "allow_self_approval": 1,
     "allowed": "Purchase Manager",
     "condition": null,
@@ -316,92 +316,6 @@
   ],
   "workflow_data": null,
   "workflow_name": "Purchase Invoice",
-  "workflow_state_field": "workflow_state"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow",
-  "document_type": "Item wise Budget",
-  "is_active": 0,
-  "modified": "2024-08-29 11:07:00.088340",
-  "name": "Item wise Budget Approval",
-  "override_status": 0,
-  "send_email_alert": 0,
-  "states": [
-   {
-    "allow_edit": "All",
-    "avoid_status_override": 0,
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Item wise Budget Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Pending",
-    "update_field": null,
-    "update_value": null,
-    "workflow_builder_id": null
-   },
-   {
-    "allow_edit": "Administrator",
-    "avoid_status_override": 0,
-    "doc_status": "1",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Item wise Budget Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Approved",
-    "update_field": null,
-    "update_value": null,
-    "workflow_builder_id": null
-   },
-   {
-    "allow_edit": "Administrator",
-    "avoid_status_override": 0,
-    "doc_status": "1",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Item wise Budget Approval",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Rejected",
-    "update_field": "",
-    "update_value": "",
-    "workflow_builder_id": null
-   }
-  ],
-  "transitions": [
-   {
-    "action": "Approve",
-    "allow_self_approval": 1,
-    "allowed": "Administrator",
-    "condition": null,
-    "next_state": "Approved",
-    "parent": "Item wise Budget Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Pending",
-    "workflow_builder_id": null
-   },
-   {
-    "action": "Reject",
-    "allow_self_approval": 1,
-    "allowed": "Administrator",
-    "condition": null,
-    "next_state": "Rejected",
-    "parent": "Item wise Budget Approval",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Pending",
-    "workflow_builder_id": null
-   }
-  ],
-  "workflow_data": null,
-  "workflow_name": "Item wise Budget Approval",
   "workflow_state_field": "workflow_state"
  },
  {
