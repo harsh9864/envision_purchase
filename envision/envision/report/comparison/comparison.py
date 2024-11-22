@@ -40,7 +40,8 @@ def get_data(filters):
             sq.incoterm,
             sq.named_place,
             sq.custom_payment_terms,
-            sq.custom_delivery_terms
+            sq.custom_delivery_terms,
+            sq_item.request_for_quotation_item
         )
         .where(
             (sq_item.parent == sq.name)
@@ -88,6 +89,7 @@ def get_columns(supplier_quotation_data):
 
 def prepare_data(supplier_quotation_data):
     out = []
+    item_details = []
     item_totals = defaultdict(float)
 
     # Group data by item code
@@ -96,6 +98,7 @@ def prepare_data(supplier_quotation_data):
     for data in supplier_quotation_data:
         
         item_code = data.get("item_code")
+        request_for_quotation_item = data.get('request_for_quotation_item')
         name = data.get("name")
         custom_remarks = data.get('custom_remarks')
         custom_delivery_terms = data.get('custom_delivery_terms')
@@ -107,7 +110,7 @@ def prepare_data(supplier_quotation_data):
         qty = flt(data.get("qty"))
         amount = flt(data.get("amount"))
         quotation_number = data.get("parent")  # Assuming "parent" holds the quotation number
-
+        key = (item_code,rate)
         # Store supplier data per item, including quotation number and name
         grouped_data[item_code][supplier_name] = {
             "rate": round(rate, 2),
@@ -144,11 +147,42 @@ def prepare_data(supplier_quotation_data):
 
         # Add quotation number first, followed by rate and amount for each supplier
         for supplier, data in supplier_data.items():
-            print(data)
+            item_details.append({
+                "item_code":item_code,
+                "supplier": supplier,
+                "rate": data["rate"],
+                "amount": data["amount"],
+                "name":data["name"],
+                "qty":next(iter(supplier_data.values())).get("qty", 0)
+                })
+        
             row[f"{supplier}_rate"] = data["rate"]
             row[f"{supplier}_amount"] = data["amount"]
+           
 
         out.append(row)
+        
+    for data_name in supplier_quotation_data:
+        for datas in item_details:
+            if datas["item_code"] == data_name["item_code"] and datas["rate"] != data_name["rate"] and data_name.name == datas["name"]:
+               
+
+                # Initialize row_data with item_code and qty
+                row_data = {
+                    "item_code": data_name["item_code"],
+                    "qty": data_name["qty"]
+                }
+
+                # Add supplier-specific rate and amount
+                row_data[f"{datas['supplier']}_rate"] = data_name["rate"]
+                row_data[f"{datas['supplier']}_amount"] = data_name["amount"]
+
+                # Append the row data to out list
+                out.append(row_data)
+
+        
+                
+
 
     # Add total row
     total_row = {"item_code": "<b>Total</b>"}
