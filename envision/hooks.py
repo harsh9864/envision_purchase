@@ -214,6 +214,7 @@ doctype_js = {
     "Purchase Receipt" : "public/js/purchase_receipt.js",
     "Purchase Order" : "public/js/purchase_order.js",
     "Sales Order" : "public/js/sales _order.js",
+    "Stock Entry" : "public/js/stock_entry.js"
 }
 doctype_list_js = {"Supplier Quotation" : "public/js/supplier quotation List view button multiple.js"
 }
