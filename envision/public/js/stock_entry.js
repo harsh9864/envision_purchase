@@ -57,12 +57,6 @@ frappe.ui.form.on('Stock Entry', {
                         };
 
                        
-                    } else {
-                        frappe.msgprint({
-                            title: __('No Data'),
-                            message: __('No Stock Ledger Entries found for the selected criteria.'),
-                            indicator: 'orange'
-                        });
                     }
                 },
                 error: function(err) {
@@ -72,3 +66,18 @@ frappe.ui.form.on('Stock Entry', {
         }
     }
 });
+frappe.ui.form.on('Stock Entry', {
+    refresh:function(frm) {
+        if(frm.doc.stock_entry_type == "Sale Delivery"){
+            frm.set_query("custom_sales_order", function() {
+                return {
+                    "filters": {
+                        "project":frm.doc.project
+                    }
+                }
+            })
+            frm.set_df_property("custom_sales_order", "reqd", 1);
+        }
+        
+    }
+})

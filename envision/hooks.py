@@ -184,6 +184,10 @@ app_license = "mit"
 # override_doctype_dashboards = {
 # 	"Task": "envision.task.get_dashboard_data"
 # }
+override_doctype_dashboards = {
+    "Stock Entry": "envision.public.override.get_data",
+ 
+}
 
 # exempt linked doctypes from being automatically cancelled
 #
