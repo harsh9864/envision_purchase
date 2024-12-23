@@ -262,6 +262,7 @@ fixtures = [
      "Workflow",
      "Workflow State",
      "Workflow Action Master",
+     "Custom DocPerm",
     {"dt":"Print Format","filters":[
         [
         "module","in",[

@@ -2,6 +2,13 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2024-12-23 16:02:55.433718",
+  "name": "Final Submit",
+  "workflow_action_name": "Final Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
   "modified": "2024-10-03 18:33:32.946702",
   "name": "Pending At HOD",
   "workflow_action_name": "Pending At HOD"
@@ -54,6 +61,13 @@
   "modified": "2024-10-23 17:09:43.420752",
   "name": "Submit",
   "workflow_action_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-11-20 10:37:29.997221",
+  "name": "Amend",
+  "workflow_action_name": "Amend"
  },
  {
   "docstatus": 0,

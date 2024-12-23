@@ -3,6 +3,15 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2024-12-23 15:59:19.153396",
+  "name": "Accounted",
+  "style": "",
+  "workflow_state_name": "Accounted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2024-07-23 16:48:09.500376",
   "name": "Checked",
   "style": "Info",
@@ -92,33 +101,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "remove",
-  "modified": "2024-11-13 09:48:22.706497",
-  "name": "Rejected",
-  "style": "Danger",
-  "workflow_state_name": "Rejected"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-11-13 09:59:26.034497",
-  "name": "Budget Review",
-  "style": "Info",
-  "workflow_state_name": "Budget Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-11-13 09:59:45.314982",
-  "name": "Director Review",
-  "style": "Primary",
-  "workflow_state_name": "Director Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "",
   "modified": "2024-11-13 10:00:05.778658",
   "name": "Adjusted",
@@ -137,8 +119,44 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "ok-sign",
-  "modified": "2024-11-13 09:48:22.704147",
+  "icon": "",
+  "modified": "2024-10-01 15:34:22.955254",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-01 15:33:44.946212",
+  "name": "Director Review",
+  "style": "Primary",
+  "workflow_state_name": "Director Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-01 15:32:58.565765",
+  "name": "Budget Review",
+  "style": "Info",
+  "workflow_state_name": "Budget Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-11-20 10:37:49.839292",
+  "name": "Amended",
+  "style": "Inverse",
+  "workflow_state_name": "Amended"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-01 15:34:11.879651",
   "name": "Approved",
   "style": "Success",
   "workflow_state_name": "Approved"
@@ -174,9 +192,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-30 10:15:12.101195",
+  "modified": "2024-12-23 16:13:24.409746",
   "name": "Submitted",
-  "style": "Success",
+  "style": "Info",
   "workflow_state_name": "Submitted"
  },
  {
