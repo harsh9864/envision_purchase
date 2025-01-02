@@ -262,7 +262,23 @@ fixtures = [
      "Workflow",
      "Workflow State",
      "Workflow Action Master",
-     
+     {
+        "dt": "Custom DocPerm",
+        "filters": [
+            [
+                "parent",
+                "in",
+                [
+                    "Material Request",
+                    "Request For Quotation",
+                    "Supplier Quotation",
+                    "Purchase Order",
+                    "Purchase Invoice",
+                    "Stock Entry"
+                ],
+            ]
+        ],
+    },
     {"dt":"Print Format","filters":[
         [
         "module","in",[
