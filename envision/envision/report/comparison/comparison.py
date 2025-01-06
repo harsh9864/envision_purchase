@@ -5,7 +5,10 @@ from collections import defaultdict
 import frappe
 from frappe import _
 from frappe.utils import flt
+import locale
 
+# Set the locale for currency formatting (e.g., US dollars)
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 def execute(filters=None):
     if not filters:
         return [], []
@@ -49,7 +52,7 @@ def get_data(filters):
             & (sq.company == filters.get("company"))
             & (sq.transaction_date.between(filters.get("from_date"), filters.get("to_date")))
         )
-          .groupby(sq_item.item_code, sq_item.rate)
+          .groupby(sq_item.item_code, sq_item.rate,sq.name)
     )
     
     if filters.get("request_for_quotation"):
@@ -110,7 +113,7 @@ def prepare_data(supplier_quotation_data):
         qty = flt(data.get("qty"))
         amount = flt(data.get("amount"))
         quotation_number = data.get("parent")  # Assuming "parent" holds the quotation number
-        key = (item_code,rate)
+        
         # Store supplier data per item, including quotation number and name
         grouped_data[item_code][supplier_name] = {
             "rate": round(rate, 2),
@@ -126,7 +129,7 @@ def prepare_data(supplier_quotation_data):
         }
         
         item_totals[supplier_name] += amount
-
+    
     quote_name_row = {"item_code": "<b>Quotation Name</b>"}
     for item_code, supplier_data in grouped_data.items():
         for supplier, data in supplier_data.items():
@@ -136,7 +139,7 @@ def prepare_data(supplier_quotation_data):
 
     out.append(quote_name_row)
     # Populate rows based on grouped data
-    
+    print(grouped_data)
     for item_code, supplier_data in grouped_data.items():
         
         # Row for item details and quantity
@@ -144,7 +147,7 @@ def prepare_data(supplier_quotation_data):
             "item_code": item_code,
             "qty": next(iter(supplier_data.values())).get("qty", 0)
         }
-
+       
         # Add quotation number first, followed by rate and amount for each supplier
         for supplier, data in supplier_data.items():
             item_details.append({
@@ -155,7 +158,7 @@ def prepare_data(supplier_quotation_data):
                 "name":data["name"],
                 "qty":next(iter(supplier_data.values())).get("qty", 0)
                 })
-        
+            
             row[f"{supplier}_rate"] = data["rate"]
             row[f"{supplier}_amount"] = data["amount"]
            
