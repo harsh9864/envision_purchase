@@ -76,6 +76,16 @@ frappe.query_reports["Comparison"] = {
 			},
 		},	
 		{
+			fieldtype: "Link",
+			label: __("Material Request"),
+			options: "Material Request",
+			fieldname: "material_request",
+			default: "",
+			get_query: () => {
+				return { filters: { docstatus: ["<", 2] } };
+			},
+		},
+		{
 			fieldtype: "MultiSelectList",
 			label: __("Supplier Quotation"),
 			fieldname: "supplier_quotation",
@@ -94,6 +104,7 @@ frappe.query_reports["Comparison"] = {
 				return { filters: { docstatus: ["<", 2] } };
 			},
 		},
+		
 		
 		
 	],

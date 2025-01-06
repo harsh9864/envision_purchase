@@ -57,6 +57,8 @@ def get_data(filters):
     
     if filters.get("request_for_quotation"):
         query = query.where(sq.custom_request_for_quotation == filters.get("request_for_quotation"))
+    if filters.get("material_request"):
+        query = query.where(sq_item.material_request == filters.get("material_request"))
     if filters.get("item_code"):
         query = query.where(sq_item.item_code == filters.get("item_code") )
         
