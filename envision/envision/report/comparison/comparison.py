@@ -77,7 +77,7 @@ def get_columns(supplier_quotation_data):
     # Define static columns
     columns = [
         {"fieldname": "item_code", "label": _("Item Details"), "fieldtype": "Data", "width": 250},
-        {"fieldname": "qty", "label": _("Qty"), "fieldtype": "Data", "width": 180}
+        {"fieldname": "qty", "label": _("Qty"), "fieldtype": "Data", "width": 180,"align": "center"}
     ]
 
     # Add dynamic columns for each supplier's rates and amounts
@@ -85,8 +85,8 @@ def get_columns(supplier_quotation_data):
 
     for supplier in unique_suppliers:
         columns.extend([
-            {"fieldname": f"{frappe.scrub(supplier)}_rate", "label": _(f"{supplier} Unit Rate"), "fieldtype": "Data", "width": 180},
-            {"fieldname": f"{frappe.scrub(supplier)}_amount", "label": _(f"{supplier} Amount"), "fieldtype": "Data", "width": 180}
+            {"fieldname": f"{frappe.scrub(supplier)}_rate", "label": _(f"{supplier} Unit Rate"), "fieldtype": "Data", "width": 180,"align": "right"},
+            {"fieldname": f"{frappe.scrub(supplier)}_amount", "label": _(f"{supplier} Amount"), "fieldtype": "Data", "width": 180,"align": "right"}
         ])
 
     return columns
@@ -160,8 +160,8 @@ def prepare_data(supplier_quotation_data):
                 "qty":next(iter(supplier_data.values())).get("qty", 0)
                 })
             
-            row[f"{supplier}_rate"] = data["rate"]
-            row[f"{supplier}_amount"] = data["amount"]
+            row[f"{supplier}_rate"] =  frappe.format_value(data["rate"], 'Currency')
+            row[f"{supplier}_amount"] = frappe.format_value(data["amount"], 'Currency')
            
 
         out.append(row)
@@ -178,8 +178,8 @@ def prepare_data(supplier_quotation_data):
                 }
 
                 # Add supplier-specific rate and amount
-                row_data[f"{datas['supplier']}_rate"] = data_name["rate"]
-                row_data[f"{datas['supplier']}_amount"] = data_name["amount"]
+                row_data[f"{datas['supplier']}_rate"] =  frappe.format_value(data_name["rate"], 'Currency')
+                row_data[f"{datas['supplier']}_amount"] =  frappe.format_value(data_name["amount"], 'Currency') 
 
                 # Append the row data to out list
                 out.append(row_data)
