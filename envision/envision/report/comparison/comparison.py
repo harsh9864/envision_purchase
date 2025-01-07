@@ -5,7 +5,7 @@ from collections import defaultdict
 import frappe
 from frappe import _
 from frappe.utils import flt
-import locale
+
 
 
 def execute(filters=None):
