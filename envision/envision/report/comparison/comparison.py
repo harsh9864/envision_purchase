@@ -7,8 +7,7 @@ from frappe import _
 from frappe.utils import flt
 import locale
 
-# Set the locale for currency formatting (e.g., US dollars)
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
 def execute(filters=None):
     if not filters:
         return [], []
