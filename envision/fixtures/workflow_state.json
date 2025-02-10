@@ -147,24 +147,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-01 15:34:11.879651",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-10-30 10:15:21.109690",
-  "name": "Reviewed",
-  "style": "Primary",
-  "workflow_state_name": "Reviewed"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-10-04 11:09:10.985629",
   "name": "Rework",
   "style": "Warning",
@@ -183,19 +165,37 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-12-23 16:13:24.409746",
-  "name": "Submitted",
-  "style": "Info",
-  "workflow_state_name": "Submitted"
+  "modified": "2024-11-29 11:48:47.918481",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-11-29 11:48:47.918481",
-  "name": "Pending",
-  "style": "",
-  "workflow_state_name": "Pending"
+  "modified": "2024-10-30 10:15:21.109690",
+  "name": "Reviewed",
+  "style": "Primary",
+  "workflow_state_name": "Reviewed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-01 15:34:11.879651",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-12-23 16:13:24.409746",
+  "name": "Submitted",
+  "style": "Info",
+  "workflow_state_name": "Submitted"
  },
  {
   "docstatus": 0,
