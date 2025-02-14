@@ -262,6 +262,7 @@ fixtures = [
      "Workflow",
      "Workflow State",
      "Workflow Action Master",
+     "Document Naming Settings",
      {
         "dt": "Custom DocPerm",
         "filters": [
