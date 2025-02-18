@@ -3,15 +3,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-12-23 15:59:19.153396",
-  "name": "Accounted",
-  "style": "",
-  "workflow_state_name": "Accounted"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-07-23 16:48:09.500376",
   "name": "Checked",
   "style": "Info",
@@ -169,6 +160,15 @@
   "name": "Pending",
   "style": "",
   "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-12-23 15:59:19.153396",
+  "name": "Accounted",
+  "style": "",
+  "workflow_state_name": "Accounted"
  },
  {
   "docstatus": 0,
