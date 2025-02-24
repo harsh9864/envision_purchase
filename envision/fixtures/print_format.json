@@ -64,7 +64,7 @@
  {
   "absolute_value": 0,
   "align_labels_right": 0,
-  "css": ".print-heading {\n    border-bottom: 2px solid #333;\n    display: none;\n}\n.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {\n    border-top: 0;\n    text-align: center;\n}",
+  "css": ".print-heading {\n    border-bottom: 2px solid #333;\n    display: none;\n}\n.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {\n    border-top: 0;\n    text-align: center;\n    border:1px solid black;\n    font-weight:bold;\n}\n.print-format .table-bordered td, .print-format .table-bordered th {\n    border: 1px solid black;\n}\n.print-format th {\n    color: black;\n    font-weight: normal;\n    border-bottom-width: 1px !important;\n}\n.print-format table td .value {\n    font-size: 12px;\n    line-height: 1.0;\n}\n.print-format .row:not(.section-break) {\n    line-height: 1.6;\n    margin-top: 5px !important;\n}\n.print-format label {\n    font-weight: bold;\n    font-size: 13px;\n    color:black;\n    margin-bottom: 0;\n}\n.print-format td, .print-format th {\n    padding: 5px !important;\n}\n.print-format .letter-head {\n    margin-bottom: 1px;\n}\nh4, .h4, h5, .h5, h6, .h6 {\n    margin-top: 5px;\n    margin-bottom: 5px;\n}\n\n[data-fieldname=\"payment_schedule\"] .value { text-align: center; }\n[data-fieldname=\"terms\"] .ql-snow { padding: 1px; }",
   "custom_format": 0,
   "default_print_language": "en",
   "disabled": 0,
@@ -80,7 +80,7 @@
   "margin_left": 1.0,
   "margin_right": 1.0,
   "margin_top": 5.0,
-  "modified": "2025-02-24 13:39:17.340745",
+  "modified": "2025-02-24 16:50:13.195836",
   "module": "Envision",
   "name": "Purchase Order Standard",
   "page_number": "Bottom Center",

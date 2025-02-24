@@ -38,5 +38,12 @@ frappe.ui.form.on("Purchase Order",{
                 }
             }
         })
+    },
+    custom_general_terms: function(frm) {
+        erpnext.utils.get_terms(cur_frm.doc.custom_general_terms, frm.doc, function(r) {
+            if (!r.exc) {
+                frappe.model.set_value(frm.doctype, frm.docname, "custom_general_terms_and_condition", r.message);
+            }
+        });
     }
 })
