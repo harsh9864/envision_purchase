@@ -23,10 +23,18 @@ frappe.ui.form.on('Purchase Order Item', {
 });
 frappe.ui.form.on("Purchase Order",{
     refresh:function(frm){
-        frm.set_query("custom_department",function(){
+        frm.set_query("department",function(){
             return{
                 filters:{
                     'company':frm.doc.company
+                }
+            }
+        })
+        frm.set_query("custom_general_terms",function(){
+            return{
+                filters:{
+                    'buying':1,
+                    'custom_general':1
                 }
             }
         })
