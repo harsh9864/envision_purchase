@@ -138,6 +138,24 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2024-12-23 15:59:19.153396",
+  "name": "Accounted",
+  "style": "",
+  "workflow_state_name": "Accounted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-23 17:20:30.511893",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2024-10-04 11:09:10.985629",
   "name": "Rework",
   "style": "Warning",
@@ -165,28 +183,10 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-12-23 15:59:19.153396",
-  "name": "Accounted",
-  "style": "",
-  "workflow_state_name": "Accounted"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-10-30 10:15:21.109690",
   "name": "Reviewed",
   "style": "Primary",
   "workflow_state_name": "Reviewed"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-10-01 15:34:11.879651",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
  },
  {
   "docstatus": 0,
@@ -201,9 +201,9 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-23 17:20:30.511893",
-  "name": "Draft",
-  "style": "Warning",
-  "workflow_state_name": "Draft"
+  "modified": "2024-10-01 15:34:11.879651",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
  }
 ]
