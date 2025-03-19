@@ -48,3 +48,23 @@ frappe.ui.form.on('Supplier Quotation', {
 	}
 });
 
+frappe.ui.form.on('Supplier Quotation', {
+    before_workflow_action: function(frm) {
+        frappe.call({
+            method: "envision.public.py.budget_value.get_budget_value",
+            args: {
+                'name': frm.doc.name
+            },
+            callback: function(r) {
+                if (r.message) {
+                    // Update the form with the returned values
+                    // frm.set_value("custom_total_budget", r.message.total_budget);
+                    // frm.set_value("custom_remaining_budget", r.message.remaining_budget);
+                    // frm.refresh();   // Refresh the form to reflect changes
+                }
+            }
+        });
+    }
+});
+
+

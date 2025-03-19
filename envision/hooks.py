@@ -144,7 +144,11 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
-
+# doc_events = {
+#     "Supplier Quotation":{
+#         "on_submit":"envision.public.py.budget_value.get_budget_value"
+#     }
+# }
 # Scheduled Tasks
 # ---------------
 

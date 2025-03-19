@@ -111,24 +111,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-01 15:33:44.946212",
-  "name": "Director Review",
-  "style": "Primary",
-  "workflow_state_name": "Director Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-10-01 15:32:58.565765",
-  "name": "Budget Review",
-  "style": "Info",
-  "workflow_state_name": "Budget Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2024-11-20 10:37:49.839292",
   "name": "Amended",
   "style": "Inverse",
@@ -142,15 +124,6 @@
   "name": "Accounted",
   "style": "",
   "workflow_state_name": "Accounted"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-10-23 17:20:30.511893",
-  "name": "Draft",
-  "style": "Warning",
-  "workflow_state_name": "Draft"
  },
  {
   "docstatus": 0,
@@ -174,6 +147,24 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2024-10-01 15:33:44.946212",
+  "name": "Director Review",
+  "style": "Primary",
+  "workflow_state_name": "Director Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-01 15:32:58.565765",
+  "name": "Budget Review",
+  "style": "Info",
+  "workflow_state_name": "Budget Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2024-11-29 11:48:47.918481",
   "name": "Pending",
   "style": "",
@@ -183,10 +174,10 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-30 10:15:21.109690",
-  "name": "Reviewed",
-  "style": "Primary",
-  "workflow_state_name": "Reviewed"
+  "modified": "2024-10-01 15:34:11.879651",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
  },
  {
   "docstatus": 0,
@@ -201,9 +192,18 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-10-01 15:34:11.879651",
-  "name": "Approved",
-  "style": "Success",
-  "workflow_state_name": "Approved"
+  "modified": "2024-10-30 10:15:21.109690",
+  "name": "Reviewed",
+  "style": "Primary",
+  "workflow_state_name": "Reviewed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-23 17:20:30.511893",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
  }
 ]
