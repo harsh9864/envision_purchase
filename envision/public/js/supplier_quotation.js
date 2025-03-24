@@ -50,6 +50,7 @@ frappe.ui.form.on('Supplier Quotation', {
 
 frappe.ui.form.on('Supplier Quotation', {
     before_workflow_action: function(frm) {
+        if(frm.doc.workflow_state === 'Draft'){
         frappe.call({
             method: "envision.public.py.budget_value.get_budget_value",
             args: {
@@ -64,6 +65,7 @@ frappe.ui.form.on('Supplier Quotation', {
                 }
             }
         });
+    }
     }
 });
 
