@@ -7,6 +7,11 @@ frappe.ui.form.on("Supplier Quotation",{
                 }
             }
         })
+        $.each(frm.doc.items || [], function(i, d) {
+            if(frm.doc.project && !d.project){
+            d.project = frm.doc.project;
+            }
+           })
     }
 })
 
@@ -70,3 +75,23 @@ frappe.ui.form.on('Supplier Quotation', {
 });
 
 
+frappe.ui.form.on('Supplier Quotation', {
+    project: function(frm) {
+        // When parent project is changed, update all existing child rows
+        (frm.doc.items || []).forEach(function(d) {
+            d.project = frm.doc.project;
+        });
+        frm.refresh_field("items");
+    }
+});
+
+// This triggers when a new child row is added
+frappe.ui.form.on('Supplier Quotation Item', {
+    items_add: function(frm, cdt, cdn) {
+        const child = locals[cdt][cdn];
+        if (frm.doc.project) {
+            child.project = frm.doc.project;
+            frm.refresh_field("items");
+        }
+    }
+});
