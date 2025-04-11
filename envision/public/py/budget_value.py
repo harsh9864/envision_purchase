@@ -7,8 +7,8 @@ def get_budget_value(name):
     budget_sum = 0
     budget_remaining = 0
 
-    # Fetch all budget items for this quotation in one query
     project_budgets = {}
+    used_budget_keys = set()  # To prevent duplicate counting
 
     # Check and calculate budget based on project
     if doc.project:
@@ -20,7 +20,6 @@ def get_budget_value(name):
         }, 'name')
         
         if budget_name:
-            # Fetch budget items only once per budget name
             if budget_name not in project_budgets:
                 project_budgets[budget_name] = frappe.db.get_all(
                     "Budget Items",
@@ -28,14 +27,14 @@ def get_budget_value(name):
                     fields=['item', 'current_budget', 'amount']
                 )
 
-            for item in doc.items:   # Iterate over items to match budget
+            for item in doc.items:
                 for budget in project_budgets[budget_name]:
-                    if budget['item'] == item.item_group or budget['item'] == item.item_code:
+                    budget_key = budget['item']
+                    if (budget_key == item.item_group or budget_key == item.item_code) and budget_key not in used_budget_keys:
                         budget_sum += budget['amount'] or 0
                         budget_remaining += budget['current_budget'] or 0
-
+                        used_budget_keys.add(budget_key)
     else:
-        # Iterate over items in case no project is directly linked
         for item in doc.items:
             budget_name = frappe.db.get_value("Project Budget", {
                 'company': doc.company,
@@ -45,7 +44,6 @@ def get_budget_value(name):
             }, 'name')
             
             if budget_name:
-                # Fetch budget items only once per budget name
                 if budget_name not in project_budgets:
                     project_budgets[budget_name] = frappe.db.get_all(
                         "Budget Items",
@@ -54,16 +52,17 @@ def get_budget_value(name):
                     )
 
                 for budget in project_budgets[budget_name]:
-                    if budget['item'] == item.item_group or budget['item'] == item.item_code:
+                    budget_key = budget['item']
+                    if (budget_key == item.item_group or budget_key == item.item_code) and budget_key not in used_budget_keys:
                         budget_sum += budget['amount'] or 0
                         budget_remaining += budget['current_budget'] or 0
+                        used_budget_keys.add(budget_key)
 
     # Assign the calculated values to the custom fields
     doc.custom_total_budget = budget_sum
     doc.custom_remaining_budget = budget_remaining
-    doc.save()  # Save the document with updated values
+    doc.save()
 
-    # Return the values to display them on the form
     return {
         "total_budget": budget_sum,
         "remaining_budget": budget_remaining
