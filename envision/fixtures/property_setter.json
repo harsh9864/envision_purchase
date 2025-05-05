@@ -81,22 +81,6 @@
  },
  {
   "default_value": null,
-  "doc_type": "Purchase Order Item",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "supplier_quotation",
-  "is_system_generated": 0,
-  "modified": "2025-04-03 11:09:50.046728",
-  "module": "Envision",
-  "name": "Purchase Order Item-supplier_quotation-reqd",
-  "property": "reqd",
-  "property_type": "Check",
-  "row_name": null,
-  "value": "0"
- },
- {
-  "default_value": null,
   "doc_type": "Supplier Quotation Item",
   "docstatus": 0,
   "doctype": "Property Setter",
@@ -110,5 +94,37 @@
   "property_type": "Check",
   "row_name": null,
   "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Supplier Quotation Item",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "request_for_quotation",
+  "is_system_generated": 0,
+  "modified": "2025-05-02 17:23:48.648973",
+  "module": "Envision",
+  "name": "Supplier Quotation Item-request_for_quotation-reqd",
+  "property": "read_only",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "0"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Purchase Order Item",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "supplier_quotation",
+  "is_system_generated": 0,
+  "modified": "2025-05-02 17:27:22.456222",
+  "module": "Envision",
+  "name": "Purchase Order Item-supplier_quotation-mandatory_depends_on",
+  "property": "mandatory_depends_on",
+  "property_type": "small_text",
+  "row_name": null,
+  "value": "eval:doc.against_blanket_order == 0"
  }
 ]

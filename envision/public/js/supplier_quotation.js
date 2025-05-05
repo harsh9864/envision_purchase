@@ -19,7 +19,7 @@ frappe.ui.form.on("Supplier Quotation",{
 
 frappe.ui.form.on('Supplier Quotation', {
 	after_workflow_action: (frm) => {
-		if (frm.doc.workflow_state === 'Submitted') {
+		if (frm.doc.workflow_state === 'Reviewed') {
 			let rfq = frm.doc.custom_request_for_quotation;
 			if (rfq) {
 				frappe.call({
