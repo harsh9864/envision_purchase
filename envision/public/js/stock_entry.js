@@ -153,8 +153,7 @@ frappe.ui.form.on('Stock Entry', {
             frm.set_query("custom_sales_invoice", function() {
                 return {
                     "filters": {
-                        "project":frm.doc.project,
-                        "custom_stock_entry": frm.doc.name,
+                        "project":frm.doc.project
                     }
                 }
             })
