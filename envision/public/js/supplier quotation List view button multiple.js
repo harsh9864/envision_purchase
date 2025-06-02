@@ -10,17 +10,7 @@ frappe.listview_settings['Supplier Quotation'] = {
             return __('Print {0}', [doc.name]);  // Tooltip text
         },
         action: function(doc) {
-            // Check if `custom_request_for_quotation` is populated
-            // console.log("Custom RFQ value: ", doc.custom_request_for_quotation);
-            
-            // Ensure custom_request_for_quotation exists before proceeding
-            // if (!doc.custom_request_for_quotation) {
-            //     frappe.msgprint(__('No Request for Quotation found for this document.'));
-                
-            //     return;
-            // }
-            
-            // Set route options to filter the report by the custom_request_for_quotation field
+         
             frappe.route_options = {
                 request_for_quotation: doc.custom_request_for_quotation
             };
