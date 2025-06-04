@@ -47,3 +47,51 @@ frappe.ui.form.on("Purchase Order",{
         });
     }
 })
+ 
+frappe.ui.form.on("Purchase Order", {
+    company: function (frm) {
+        if (frm.doc.company) {
+            frappe.db.get_doc("Company", frm.doc.company)
+                .then(company_doc => {
+                    if (company_doc.custom_enable_project_budget) {
+                        frm.set_value("custom_update_project_budget",1)
+                    }
+                    else{
+                        frm.set_value("custom_update_project_budget",0)
+                    }
+                })
+        } else {
+            console.warn("No company selected.");
+        }
+    },
+ 
+    project: function (frm) {
+        console.log(frm.doc.department);
+        if(frm.doc.department && frm.doc.project){
+            frm.doc.items.forEach(item => {
+                frappe.model.set_value(item.doctype, item.name, "project", frm.doc.project);    
+                frappe.model.set_value(item.doctype, item.name, "department", frm.doc.department);
+            }
+            );
+            frm.refresh_field("items");
+        }
+    },
+    department: function (frm) {
+        if(frm.doc.department){
+            frm.doc.items.forEach(item => {
+                frappe.model.set_value(item.doctype, item.name, "department", frm.doc.department);
+            }
+            );
+            frm.refresh_field("items");
+        }
+    },
+});
+ 
+frappe.ui.form.on("Purchase Order Item",{
+    items_add: function (frm, cdt, cdn) {
+        const row = locals[cdt][cdn];
+        frappe.model.set_value(cdt, cdn, "project", frm.doc.project);
+        frappe.model.set_value(cdt, cdn, "department", frm.doc.department);
+        frm.refresh_field("items");
+    }
+});
